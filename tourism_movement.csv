@@ -1,0 +1,612 @@
+Year,Month_Num,Month_Name,Region,Italians,Foreigners
+2022,1,Gennaio,"Trento, Monte Bondone e Altopiano di Pinè",36680,13080
+2022,1,Gennaio,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",115759,14968
+2022,1,Gennaio,Val di Fiemme e Val di Cembra,60445,43152
+2022,1,Gennaio,Val di Fassa,208760,102203
+2022,1,Gennaio,"San Martino di Castrozza, Primiero e Vanoi",54367,6765
+2022,1,Gennaio,"Valsugana, Tesino e Valle dei Mocheni",11101,1545
+2022,1,Gennaio,Altipiani cimbri e Vigolana,51516,18509
+2022,1,Gennaio,"Rovereto, Vallagarina e Monte Baldo",19142,2302
+2022,1,Gennaio,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",21821,7674
+2022,1,Gennaio,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",119709,43534
+2022,1,Gennaio,Val di Sole,124786,93705
+2022,1,Gennaio,Val di Non,9302,488
+2022,1,Gennaio,Provincia,833388,347925
+2022,2,Febbraio,"Trento, Monte Bondone e Altopiano di Pinè",29853,21741
+2022,2,Febbraio,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",106967,32314
+2022,2,Febbraio,Val di Fiemme e Val di Cembra,45994,64786
+2022,2,Febbraio,Val di Fassa,168321,144828
+2022,2,Febbraio,"San Martino di Castrozza, Primiero e Vanoi",51758,12148
+2022,2,Febbraio,"Valsugana, Tesino e Valle dei Mocheni",6445,1411
+2022,2,Febbraio,Altipiani cimbri e Vigolana,41768,27305
+2022,2,Febbraio,"Rovereto, Vallagarina e Monte Baldo",13683,5019
+2022,2,Febbraio,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",10453,4912
+2022,2,Febbraio,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",100689,81289
+2022,2,Febbraio,Val di Sole,86118,138618
+2022,2,Febbraio,Val di Non,7904,621
+2022,2,Febbraio,Provincia,669953,534992
+2022,3,Marzo,"Trento, Monte Bondone e Altopiano di Pinè",29093,22341
+2022,3,Marzo,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",77681,23087
+2022,3,Marzo,Val di Fiemme e Val di Cembra,30254,61032
+2022,3,Marzo,Val di Fassa,126868,129279
+2022,3,Marzo,"San Martino di Castrozza, Primiero e Vanoi",36677,5323
+2022,3,Marzo,"Valsugana, Tesino e Valle dei Mocheni",6600,2588
+2022,3,Marzo,Altipiani cimbri e Vigolana,26156,16650
+2022,3,Marzo,"Rovereto, Vallagarina e Monte Baldo",10824,2042
+2022,3,Marzo,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",19303,31120
+2022,3,Marzo,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",91216,59834
+2022,3,Marzo,Val di Sole,94578,122542
+2022,3,Marzo,Val di Non,5073,703
+2022,3,Marzo,Provincia,554323,476541
+2022,4,Aprile,"Trento, Monte Bondone e Altopiano di Pinè",24814,14171
+2022,4,Aprile,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",8703,4045
+2022,4,Aprile,Val di Fiemme e Val di Cembra,11124,14896
+2022,4,Aprile,Val di Fassa,12929,9899
+2022,4,Aprile,"San Martino di Castrozza, Primiero e Vanoi",9863,823
+2022,4,Aprile,"Valsugana, Tesino e Valle dei Mocheni",11604,9827
+2022,4,Aprile,Altipiani cimbri e Vigolana,2524,947
+2022,4,Aprile,"Rovereto, Vallagarina e Monte Baldo",6345,4546
+2022,4,Aprile,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",46104,141150
+2022,4,Aprile,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",15842,10571
+2022,4,Aprile,Val di Sole,13125,39219
+2022,4,Aprile,Val di Non,8923,3390
+2022,4,Aprile,Provincia,171900,253484
+2022,5,Maggio,"Trento, Monte Bondone e Altopiano di Pinè",25258,18629
+2022,5,Maggio,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",10593,12007
+2022,5,Maggio,Val di Fiemme e Val di Cembra,9181,6562
+2022,5,Maggio,Val di Fassa,8948,4932
+2022,5,Maggio,"San Martino di Castrozza, Primiero e Vanoi",2886,376
+2022,5,Maggio,"Valsugana, Tesino e Valle dei Mocheni",15543,16810
+2022,5,Maggio,Altipiani cimbri e Vigolana,6292,4075
+2022,5,Maggio,"Rovereto, Vallagarina e Monte Baldo",7068,4921
+2022,5,Maggio,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",40723,176067
+2022,5,Maggio,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",5738,2168
+2022,5,Maggio,Val di Sole,3983,4633
+2022,5,Maggio,Val di Non,7304,4724
+2022,5,Maggio,Provincia,143517,255904
+2022,6,Giugno,"Trento, Monte Bondone e Altopiano di Pinè",29024,29642
+2022,6,Giugno,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",93782,24624
+2022,6,Giugno,Val di Fiemme e Val di Cembra,43021,19212
+2022,6,Giugno,Val di Fassa,123411,33285
+2022,6,Giugno,"San Martino di Castrozza, Primiero e Vanoi",33489,5054
+2022,6,Giugno,"Valsugana, Tesino e Valle dei Mocheni",29733,28532
+2022,6,Giugno,Altipiani cimbri e Vigolana,25623,6495
+2022,6,Giugno,"Rovereto, Vallagarina e Monte Baldo",13536,7963
+2022,6,Giugno,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",58547,242787
+2022,6,Giugno,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",36268,9881
+2022,6,Giugno,Val di Sole,41729,17588
+2022,6,Giugno,Val di Non,12289,7712
+2022,6,Giugno,Provincia,540452,432775
+2022,7,Luglio,"Trento, Monte Bondone e Altopiano di Pinè",55655,36706
+2022,7,Luglio,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",223479,21591
+2022,7,Luglio,Val di Fiemme e Val di Cembra,142735,16082
+2022,7,Luglio,Val di Fassa,391475,45134
+2022,7,Luglio,"San Martino di Castrozza, Primiero e Vanoi",107602,9669
+2022,7,Luglio,"Valsugana, Tesino e Valle dei Mocheni",59514,29469
+2022,7,Luglio,Altipiani cimbri e Vigolana,86297,7125
+2022,7,Luglio,"Rovereto, Vallagarina e Monte Baldo",29095,8713
+2022,7,Luglio,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",77418,293291
+2022,7,Luglio,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",152453,24748
+2022,7,Luglio,Val di Sole,201790,22701
+2022,7,Luglio,Val di Non,34407,7584
+2022,7,Luglio,Provincia,1561920,522813
+2022,8,Agosto,"Trento, Monte Bondone e Altopiano di Pinè",77177,31704
+2022,8,Agosto,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",262349,14519
+2022,8,Agosto,Val di Fiemme e Val di Cembra,173125,9276
+2022,8,Agosto,Val di Fassa,450156,29007
+2022,8,Agosto,"San Martino di Castrozza, Primiero e Vanoi",130528,4810
+2022,8,Agosto,"Valsugana, Tesino e Valle dei Mocheni",79732,25662
+2022,8,Agosto,Altipiani cimbri e Vigolana,103457,5391
+2022,8,Agosto,"Rovereto, Vallagarina e Monte Baldo",31908,8293
+2022,8,Agosto,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",129379,270550
+2022,8,Agosto,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",207113,12749
+2022,8,Agosto,Val di Sole,261071,16785
+2022,8,Agosto,Val di Non,45458,6958
+2022,8,Agosto,Provincia,1951453,435704
+2022,9,Settembre,"Trento, Monte Bondone e Altopiano di Pinè",30092,34367
+2022,9,Settembre,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",84658,30316
+2022,9,Settembre,Val di Fiemme e Val di Cembra,47618,21980
+2022,9,Settembre,Val di Fassa,139623,38312
+2022,9,Settembre,"San Martino di Castrozza, Primiero e Vanoi",46896,5512
+2022,9,Settembre,"Valsugana, Tesino e Valle dei Mocheni",34126,28939
+2022,9,Settembre,Altipiani cimbri e Vigolana,20011,6866
+2022,9,Settembre,"Rovereto, Vallagarina e Monte Baldo",12861,7925
+2022,9,Settembre,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",53483,241685
+2022,9,Settembre,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",46292,14320
+2022,9,Settembre,Val di Sole,48403,26325
+2022,9,Settembre,Val di Non,15785,9982
+2022,9,Settembre,Provincia,579848,466529
+2022,10,Ottobre,"Trento, Monte Bondone e Altopiano di Pinè",30464,22247
+2022,10,Ottobre,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",15423,13767
+2022,10,Ottobre,Val di Fiemme e Val di Cembra,10520,10377
+2022,10,Ottobre,Val di Fassa,17291,7645
+2022,10,Ottobre,"San Martino di Castrozza, Primiero e Vanoi",14085,1284
+2022,10,Ottobre,"Valsugana, Tesino e Valle dei Mocheni",13571,11782
+2022,10,Ottobre,Altipiani cimbri e Vigolana,2306,1241
+2022,10,Ottobre,"Rovereto, Vallagarina e Monte Baldo",10578,5798
+2022,10,Ottobre,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",51708,153616
+2022,10,Ottobre,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",8446,3077
+2022,10,Ottobre,Val di Sole,8737,8782
+2022,10,Ottobre,Val di Non,12855,5830
+2022,10,Ottobre,Provincia,195984,245446
+2022,11,Novembre,"Trento, Monte Bondone e Altopiano di Pinè",31016,8832
+2022,11,Novembre,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",5978,1606
+2022,11,Novembre,Val di Fiemme e Val di Cembra,2580,2020
+2022,11,Novembre,Val di Fassa,8929,2184
+2022,11,Novembre,"San Martino di Castrozza, Primiero e Vanoi",3823,292
+2022,11,Novembre,"Valsugana, Tesino e Valle dei Mocheni",9232,2178
+2022,11,Novembre,Altipiani cimbri e Vigolana,523,287
+2022,11,Novembre,"Rovereto, Vallagarina e Monte Baldo",6619,2577
+2022,11,Novembre,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",18050,27357
+2022,11,Novembre,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",7122,2102
+2022,11,Novembre,Val di Sole,1974,711
+2022,11,Novembre,Val di Non,4679,1069
+2022,11,Novembre,Provincia,100525,51215
+2022,12,Dicembre,"Trento, Monte Bondone e Altopiano di Pinè",59434,14359
+2022,12,Dicembre,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",87643,12145
+2022,12,Dicembre,Val di Fiemme e Val di Cembra,63342,42195
+2022,12,Dicembre,Val di Fassa,166388,56048
+2022,12,Dicembre,"San Martino di Castrozza, Primiero e Vanoi",46948,3298
+2022,12,Dicembre,"Valsugana, Tesino e Valle dei Mocheni",20635,1895
+2022,12,Dicembre,Altipiani cimbri e Vigolana,38378,9511
+2022,12,Dicembre,"Rovereto, Vallagarina e Monte Baldo",15556,2620
+2022,12,Dicembre,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",37256,17821
+2022,12,Dicembre,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",103491,40815
+2022,12,Dicembre,Val di Sole,106482,89478
+2022,12,Dicembre,Val di Non,14051,2618
+2022,12,Dicembre,Provincia,759604,292803
+2022,0,Total,"Trento, Monte Bondone e Altopiano di Pinè",458560,267819
+2022,0,Total,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",1093015,204989
+2022,0,Total,Val di Fiemme e Val di Cembra,639939,311570
+2022,0,Total,Val di Fassa,1823099,602756
+2022,0,Total,"San Martino di Castrozza, Primiero e Vanoi",538922,55354
+2022,0,Total,"Valsugana, Tesino e Valle dei Mocheni",297836,160638
+2022,0,Total,Altipiani cimbri e Vigolana,404851,104402
+2022,0,Total,"Rovereto, Vallagarina e Monte Baldo",177215,62719
+2022,0,Total,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",564245,1608030
+2022,0,Total,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",894379,305088
+2022,0,Total,Val di Sole,992776,581087
+2022,0,Total,Val di Non,178030,51679
+2022,0,Total,Provincia,8062867,4316131
+2023,1,Gennaio,"Trento, Monte Bondone e Altopiano di Pinè",52565,25168
+2023,1,Gennaio,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",165448,30018
+2023,1,Gennaio,Val di Fiemme e Val di Cembra,73131,67060
+2023,1,Gennaio,Val di Fassa,260415,151772
+2023,1,Gennaio,"San Martino di Castrozza, Primiero e Vanoi",78300,12296
+2023,1,Gennaio,"Valsugana, Tesino e Valle dei Mocheni",12548,2609
+2023,1,Gennaio,Altipiani cimbri e Vigolana,56808,36432
+2023,1,Gennaio,"Rovereto, Vallagarina e Monte Baldo",23356,4149
+2023,1,Gennaio,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",25711,16915
+2023,1,Gennaio,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",146321,71051
+2023,1,Gennaio,Val di Sole,170275,146721
+2023,1,Gennaio,Val di Non,13493,1096
+2023,1,Gennaio,Provincia,1078371,565287
+2023,2,Febbraio,"Trento, Monte Bondone e Altopiano di Pinè",35449,38717
+2023,2,Febbraio,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",134023,51076
+2023,2,Febbraio,Val di Fiemme e Val di Cembra,48119,94567
+2023,2,Febbraio,Val di Fassa,193471,215487
+2023,2,Febbraio,"San Martino di Castrozza, Primiero e Vanoi",69316,24005
+2023,2,Febbraio,"Valsugana, Tesino e Valle dei Mocheni",6893,3998
+2023,2,Febbraio,Altipiani cimbri e Vigolana,42429,53238
+2023,2,Febbraio,"Rovereto, Vallagarina e Monte Baldo",18070,8656
+2023,2,Febbraio,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",12301,8492
+2023,2,Febbraio,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",108296,110286
+2023,2,Febbraio,Val di Sole,100898,209984
+2023,2,Febbraio,Val di Non,8927,1802
+2023,2,Febbraio,Provincia,778192,820308
+2023,3,Marzo,"Trento, Monte Bondone e Altopiano di Pinè",32960,29534
+2023,3,Marzo,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",89658,25218
+2023,3,Marzo,Val di Fiemme e Val di Cembra,30688,69474
+2023,3,Marzo,Val di Fassa,119887,151383
+2023,3,Marzo,"San Martino di Castrozza, Primiero e Vanoi",36752,6637
+2023,3,Marzo,"Valsugana, Tesino e Valle dei Mocheni",8778,2649
+2023,3,Marzo,Altipiani cimbri e Vigolana,29480,28718
+2023,3,Marzo,"Rovereto, Vallagarina e Monte Baldo",14627,3424
+2023,3,Marzo,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",16597,42977
+2023,3,Marzo,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",89056,71210
+2023,3,Marzo,Val di Sole,107013,138517
+2023,3,Marzo,Val di Non,4778,1567
+2023,3,Marzo,Provincia,580274,571308
+2023,4,Aprile,"Trento, Monte Bondone e Altopiano di Pinè",27760,19857
+2023,4,Aprile,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",12175,6074
+2023,4,Aprile,Val di Fiemme e Val di Cembra,11862,16694
+2023,4,Aprile,Val di Fassa,19096,14880
+2023,4,Aprile,"San Martino di Castrozza, Primiero e Vanoi",7960,316
+2023,4,Aprile,"Valsugana, Tesino e Valle dei Mocheni",16754,11968
+2023,4,Aprile,Altipiani cimbri e Vigolana,2176,513
+2023,4,Aprile,"Rovereto, Vallagarina e Monte Baldo",9312,5537
+2023,4,Aprile,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",57470,165646
+2023,4,Aprile,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",15004,11463
+2023,4,Aprile,Val di Sole,13336,44470
+2023,4,Aprile,Val di Non,10309,4356
+2023,4,Aprile,Provincia,203214,301774
+2023,5,Maggio,"Trento, Monte Bondone e Altopiano di Pinè",25775,25231
+2023,5,Maggio,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",9257,16631
+2023,5,Maggio,Val di Fiemme e Val di Cembra,5945,10604
+2023,5,Maggio,Val di Fassa,6135,6689
+2023,5,Maggio,"San Martino di Castrozza, Primiero e Vanoi",5410,650
+2023,5,Maggio,"Valsugana, Tesino e Valle dei Mocheni",16167,20232
+2023,5,Maggio,Altipiani cimbri e Vigolana,1269,1321
+2023,5,Maggio,"Rovereto, Vallagarina e Monte Baldo",8930,7662
+2023,5,Maggio,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",30582,201859
+2023,5,Maggio,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",4790,2418
+2023,5,Maggio,Val di Sole,5269,4973
+2023,5,Maggio,Val di Non,7474,6716
+2023,5,Maggio,Provincia,127003,304986
+2023,6,Giugno,"Trento, Monte Bondone e Altopiano di Pinè",30099,33302
+2023,6,Giugno,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",89349,25036
+2023,6,Giugno,Val di Fiemme e Val di Cembra,45285,19063
+2023,6,Giugno,Val di Fassa,119418,42523
+2023,6,Giugno,"San Martino di Castrozza, Primiero e Vanoi",36761,5074
+2023,6,Giugno,"Valsugana, Tesino e Valle dei Mocheni",30189,27454
+2023,6,Giugno,Altipiani cimbri e Vigolana,22439,6680
+2023,6,Giugno,"Rovereto, Vallagarina e Monte Baldo",15993,8377
+2023,6,Giugno,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",52918,236462
+2023,6,Giugno,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",39352,9511
+2023,6,Giugno,Val di Sole,40247,20756
+2023,6,Giugno,Val di Non,13169,9380
+2023,6,Giugno,Provincia,535219,443618
+2023,7,Luglio,"Trento, Monte Bondone e Altopiano di Pinè",53189,38913
+2023,7,Luglio,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",217415,22403
+2023,7,Luglio,Val di Fiemme e Val di Cembra,138481,16051
+2023,7,Luglio,Val di Fassa,376680,48439
+2023,7,Luglio,"San Martino di Castrozza, Primiero e Vanoi",108932,10599
+2023,7,Luglio,"Valsugana, Tesino e Valle dei Mocheni",55414,28973
+2023,7,Luglio,Altipiani cimbri e Vigolana,72683,7624
+2023,7,Luglio,"Rovereto, Vallagarina e Monte Baldo",30257,10356
+2023,7,Luglio,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",72366,297230
+2023,7,Luglio,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",139101,20358
+2023,7,Luglio,Val di Sole,189733,24613
+2023,7,Luglio,Val di Non,31125,10604
+2023,7,Luglio,Provincia,1485376,536163
+2023,8,Agosto,"Trento, Monte Bondone e Altopiano di Pinè",67907,34119
+2023,8,Agosto,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",243715,15769
+2023,8,Agosto,Val di Fiemme e Val di Cembra,161960,9649
+2023,8,Agosto,Val di Fassa,427630,36736
+2023,8,Agosto,"San Martino di Castrozza, Primiero e Vanoi",128698,5693
+2023,8,Agosto,"Valsugana, Tesino e Valle dei Mocheni",69488,26344
+2023,8,Agosto,Altipiani cimbri e Vigolana,92933,5258
+2023,8,Agosto,"Rovereto, Vallagarina e Monte Baldo",24480,8541
+2023,8,Agosto,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",116828,271487
+2023,8,Agosto,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",179519,13058
+2023,8,Agosto,Val di Sole,225043,16012
+2023,8,Agosto,Val di Non,43599,7378
+2023,8,Agosto,Provincia,1781800,450044
+2023,9,Settembre,"Trento, Monte Bondone e Altopiano di Pinè",30316,35890
+2023,9,Settembre,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",85945,31772
+2023,9,Settembre,Val di Fiemme e Val di Cembra,48074,22700
+2023,9,Settembre,Val di Fassa,150443,45739
+2023,9,Settembre,"San Martino di Castrozza, Primiero e Vanoi",46399,6790
+2023,9,Settembre,"Valsugana, Tesino e Valle dei Mocheni",31057,31431
+2023,9,Settembre,Altipiani cimbri e Vigolana,21257,6134
+2023,9,Settembre,"Rovereto, Vallagarina e Monte Baldo",10615,8602
+2023,9,Settembre,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",54464,252357
+2023,9,Settembre,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",41590,12656
+2023,9,Settembre,Val di Sole,45354,25324
+2023,9,Settembre,Val di Non,15681,11186
+2023,9,Settembre,Provincia,581195,490581
+2023,10,Ottobre,"Trento, Monte Bondone e Altopiano di Pinè",27017,23110
+2023,10,Ottobre,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",12498,12739
+2023,10,Ottobre,Val di Fiemme e Val di Cembra,7935,11066
+2023,10,Ottobre,Val di Fassa,20831,10570
+2023,10,Ottobre,"San Martino di Castrozza, Primiero e Vanoi",10704,1594
+2023,10,Ottobre,"Valsugana, Tesino e Valle dei Mocheni",13030,15947
+2023,10,Ottobre,Altipiani cimbri e Vigolana,2449,1246
+2023,10,Ottobre,"Rovereto, Vallagarina e Monte Baldo",8265,7476
+2023,10,Ottobre,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",38118,163763
+2023,10,Ottobre,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",7692,4642
+2023,10,Ottobre,Val di Sole,6034,8020
+2023,10,Ottobre,Val di Non,10342,5849
+2023,10,Ottobre,Provincia,164915,266022
+2023,11,Novembre,"Trento, Monte Bondone e Altopiano di Pinè",32953,9683
+2023,11,Novembre,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",5669,1843
+2023,11,Novembre,Val di Fiemme e Val di Cembra,4437,1694
+2023,11,Novembre,Val di Fassa,11615,2586
+2023,11,Novembre,"San Martino di Castrozza, Primiero e Vanoi",3037,133
+2023,11,Novembre,"Valsugana, Tesino e Valle dei Mocheni",8509,3895
+2023,11,Novembre,Altipiani cimbri e Vigolana,1241,44
+2023,11,Novembre,"Rovereto, Vallagarina e Monte Baldo",8061,3699
+2023,11,Novembre,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",18817,28874
+2023,11,Novembre,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",9685,2457
+2023,11,Novembre,Val di Sole,2849,1418
+2023,11,Novembre,Val di Non,5164,1131
+2023,11,Novembre,Provincia,112037,57457
+2023,12,Dicembre,"Trento, Monte Bondone e Altopiano di Pinè",65263,18093
+2023,12,Dicembre,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",97226,13085
+2023,12,Dicembre,Val di Fiemme e Val di Cembra,68654,45733
+2023,12,Dicembre,Val di Fassa,184489,65506
+2023,12,Dicembre,"San Martino di Castrozza, Primiero e Vanoi",51438,4319
+2023,12,Dicembre,"Valsugana, Tesino e Valle dei Mocheni",22161,2764
+2023,12,Dicembre,Altipiani cimbri e Vigolana,38541,7150
+2023,12,Dicembre,"Rovereto, Vallagarina e Monte Baldo",18047,3052
+2023,12,Dicembre,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",39093,21578
+2023,12,Dicembre,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",111304,52820
+2023,12,Dicembre,Val di Sole,109501,97477
+2023,12,Dicembre,Val di Non,17248,2885
+2023,12,Dicembre,Provincia,822965,334462
+2023,0,Total,"Trento, Monte Bondone e Altopiano di Pinè",481253,331617
+2023,0,Total,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",1162378,251664
+2023,0,Total,Val di Fiemme e Val di Cembra,644571,384355
+2023,0,Total,Val di Fassa,1890110,792310
+2023,0,Total,"San Martino di Castrozza, Primiero e Vanoi",583707,78106
+2023,0,Total,"Valsugana, Tesino e Valle dei Mocheni",290988,178264
+2023,0,Total,Altipiani cimbri e Vigolana,383705,154358
+2023,0,Total,"Rovereto, Vallagarina e Monte Baldo",190013,79531
+2023,0,Total,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",535265,1707640
+2023,0,Total,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",891710,381930
+2023,0,Total,Val di Sole,1015552,738285
+2023,0,Total,Val di Non,181309,63950
+2023,0,Total,Provincia,8250561,5142010
+2024,1,Gennaio,"Trento, Monte Bondone e Altopiano di Pinè",48768,27962
+2024,1,Gennaio,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",165596,37659
+2024,1,Gennaio,Val di Fiemme e Val di Cembra,70488,80378
+2024,1,Gennaio,Val di Fassa,259604,180999
+2024,1,Gennaio,"San Martino di Castrozza, Primiero e Vanoi",82095,18562
+2024,1,Gennaio,"Valsugana, Tesino e Valle dei Mocheni",12582,3075
+2024,1,Gennaio,Altipiani cimbri e Vigolana,50512,46086
+2024,1,Gennaio,"Rovereto, Vallagarina e Monte Baldo",23940,5159
+2024,1,Gennaio,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",23172,18965
+2024,1,Gennaio,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",137513,93425
+2024,1,Gennaio,Val di Sole,153115,179851
+2024,1,Gennaio,Val di Non,12350,1287
+2024,1,Gennaio,Provincia,1039735,693408
+2024,2,Febbraio,"Trento, Monte Bondone e Altopiano di Pinè",33629,35908
+2024,2,Febbraio,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",138016,57545
+2024,2,Febbraio,Val di Fiemme e Val di Cembra,47988,107316
+2024,2,Febbraio,Val di Fassa,204781,237023
+2024,2,Febbraio,"San Martino di Castrozza, Primiero e Vanoi",73943,26059
+2024,2,Febbraio,"Valsugana, Tesino e Valle dei Mocheni",7825,4013
+2024,2,Febbraio,Altipiani cimbri e Vigolana,41686,56984
+2024,2,Febbraio,"Rovereto, Vallagarina e Monte Baldo",18852,9281
+2024,2,Febbraio,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",11353,9904
+2024,2,Febbraio,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",113235,119455
+2024,2,Febbraio,Val di Sole,105424,221293
+2024,2,Febbraio,Val di Non,7668,1724
+2024,2,Febbraio,Provincia,804400,886505
+2024,3,Marzo,"Trento, Monte Bondone e Altopiano di Pinè",34804,27375
+2024,3,Marzo,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",90776,27231
+2024,3,Marzo,Val di Fiemme e Val di Cembra,35781,81129
+2024,3,Marzo,Val di Fassa,126934,156298
+2024,3,Marzo,"San Martino di Castrozza, Primiero e Vanoi",48348,9568
+2024,3,Marzo,"Valsugana, Tesino e Valle dei Mocheni",11717,3489
+2024,3,Marzo,Altipiani cimbri e Vigolana,27149,22623
+2024,3,Marzo,"Rovereto, Vallagarina e Monte Baldo",15279,4233
+2024,3,Marzo,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",19410,76630
+2024,3,Marzo,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",98743,79630
+2024,3,Marzo,Val di Sole,100475,155664
+2024,3,Marzo,Val di Non,6235,1973
+2024,3,Marzo,Provincia,615651,645843
+2024,4,Aprile,"Trento, Monte Bondone e Altopiano di Pinè",25111,16090
+2024,4,Aprile,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",8773,5384
+2024,4,Aprile,Val di Fiemme e Val di Cembra,7114,7561
+2024,4,Aprile,Val di Fassa,12746,10261
+2024,4,Aprile,"San Martino di Castrozza, Primiero e Vanoi",5264,442
+2024,4,Aprile,"Valsugana, Tesino e Valle dei Mocheni",14653,8494
+2024,4,Aprile,Altipiani cimbri e Vigolana,1305,352
+2024,4,Aprile,"Rovereto, Vallagarina e Monte Baldo",7320,4777
+2024,4,Aprile,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",45309,126968
+2024,4,Aprile,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",12518,8684
+2024,4,Aprile,Val di Sole,7416,31368
+2024,4,Aprile,Val di Non,9524,3491
+2024,4,Aprile,Provincia,157053,223872
+2024,5,Maggio,"Trento, Monte Bondone e Altopiano di Pinè",24543,29323
+2024,5,Maggio,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",9345,20541
+2024,5,Maggio,Val di Fiemme e Val di Cembra,7053,10391
+2024,5,Maggio,Val di Fassa,7048,9621
+2024,5,Maggio,"San Martino di Castrozza, Primiero e Vanoi",3879,1533
+2024,5,Maggio,"Valsugana, Tesino e Valle dei Mocheni",15964,21684
+2024,5,Maggio,Altipiani cimbri e Vigolana,1932,1802
+2024,5,Maggio,"Rovereto, Vallagarina e Monte Baldo",8344,8739
+2024,5,Maggio,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",34255,225880
+2024,5,Maggio,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",5921,4151
+2024,5,Maggio,Val di Sole,5271,5884
+2024,5,Maggio,Val di Non,7540,8462
+2024,5,Maggio,Provincia,131095,348011
+2024,6,Giugno,"Trento, Monte Bondone e Altopiano di Pinè",29186,33630
+2024,6,Giugno,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",86795,30628
+2024,6,Giugno,Val di Fiemme e Val di Cembra,44078,17227
+2024,6,Giugno,Val di Fassa,118474,42140
+2024,6,Giugno,"San Martino di Castrozza, Primiero e Vanoi",39980,6638
+2024,6,Giugno,"Valsugana, Tesino e Valle dei Mocheni",26400,24786
+2024,6,Giugno,Altipiani cimbri e Vigolana,24626,10269
+2024,6,Giugno,"Rovereto, Vallagarina e Monte Baldo",14192,8657
+2024,6,Giugno,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",43642,236688
+2024,6,Giugno,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",39979,10658
+2024,6,Giugno,Val di Sole,39064,20113
+2024,6,Giugno,Val di Non,11587,9489
+2024,6,Giugno,Provincia,518003,450923
+2024,7,Luglio,"Trento, Monte Bondone e Altopiano di Pinè",53085,38935
+2024,7,Luglio,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",210461,29839
+2024,7,Luglio,Val di Fiemme e Val di Cembra,140113,16412
+2024,7,Luglio,Val di Fassa,375381,59196
+2024,7,Luglio,"San Martino di Castrozza, Primiero e Vanoi",110599,11266
+2024,7,Luglio,"Valsugana, Tesino e Valle dei Mocheni",47524,30165
+2024,7,Luglio,Altipiani cimbri e Vigolana,77097,7440
+2024,7,Luglio,"Rovereto, Vallagarina e Monte Baldo",28611,11068
+2024,7,Luglio,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",65913,305615
+2024,7,Luglio,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",140711,22370
+2024,7,Luglio,Val di Sole,182392,22820
+2024,7,Luglio,Val di Non,31170,10919
+2024,7,Luglio,Provincia,1463057,566045
+2024,8,Agosto,"Trento, Monte Bondone e Altopiano di Pinè",67115,35266
+2024,8,Agosto,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",247309,18945
+2024,8,Agosto,Val di Fiemme e Val di Cembra,167680,10485
+2024,8,Agosto,Val di Fassa,440887,40646
+2024,8,Agosto,"San Martino di Castrozza, Primiero e Vanoi",131617,6238
+2024,8,Agosto,"Valsugana, Tesino e Valle dei Mocheni",67024,23901
+2024,8,Agosto,Altipiani cimbri e Vigolana,103747,7151
+2024,8,Agosto,"Rovereto, Vallagarina e Monte Baldo",28127,9074
+2024,8,Agosto,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",117985,286828
+2024,8,Agosto,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",193171,14842
+2024,8,Agosto,Val di Sole,234098,18401
+2024,8,Agosto,Val di Non,47228,8089
+2024,8,Agosto,Provincia,1845988,479866
+2024,9,Settembre,"Trento, Monte Bondone e Altopiano di Pinè",33715,34189
+2024,9,Settembre,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",82702,38035
+2024,9,Settembre,Val di Fiemme e Val di Cembra,51942,24794
+2024,9,Settembre,Val di Fassa,146690,50917
+2024,9,Settembre,"San Martino di Castrozza, Primiero e Vanoi",47380,6655
+2024,9,Settembre,"Valsugana, Tesino e Valle dei Mocheni",26558,25748
+2024,9,Settembre,Altipiani cimbri e Vigolana,22854,6258
+2024,9,Settembre,"Rovereto, Vallagarina e Monte Baldo",11171,9462
+2024,9,Settembre,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",48481,254308
+2024,9,Settembre,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",44191,15336
+2024,9,Settembre,Val di Sole,47318,23515
+2024,9,Settembre,Val di Non,15090,11643
+2024,9,Settembre,Provincia,578092,500860
+2024,10,Ottobre,"Trento, Monte Bondone e Altopiano di Pinè",31305,26978
+2024,10,Ottobre,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",12169,17484
+2024,10,Ottobre,Val di Fiemme e Val di Cembra,7770,12919
+2024,10,Ottobre,Val di Fassa,20081,11611
+2024,10,Ottobre,"San Martino di Castrozza, Primiero e Vanoi",10052,1719
+2024,10,Ottobre,"Valsugana, Tesino e Valle dei Mocheni",13004,12760
+2024,10,Ottobre,Altipiani cimbri e Vigolana,2380,1094
+2024,10,Ottobre,"Rovereto, Vallagarina e Monte Baldo",8694,7350
+2024,10,Ottobre,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",37108,172762
+2024,10,Ottobre,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",8844,4071
+2024,10,Ottobre,Val di Sole,6512,8325
+2024,10,Ottobre,Val di Non,10047,6056
+2024,10,Ottobre,Provincia,167966,283129
+2024,11,Novembre,"Trento, Monte Bondone e Altopiano di Pinè",37406,9352
+2024,11,Novembre,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",9133,2553
+2024,11,Novembre,Val di Fiemme e Val di Cembra,5813,1171
+2024,11,Novembre,Val di Fassa,14256,2464
+2024,11,Novembre,"San Martino di Castrozza, Primiero e Vanoi",5700,251
+2024,11,Novembre,"Valsugana, Tesino e Valle dei Mocheni",9536,2783
+2024,11,Novembre,Altipiani cimbri e Vigolana,1964,456
+2024,11,Novembre,"Rovereto, Vallagarina e Monte Baldo",7962,3592
+2024,11,Novembre,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",33828,29527
+2024,11,Novembre,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",12405,2511
+2024,11,Novembre,Val di Sole,4163,1876
+2024,11,Novembre,Val di Non,8727,1483
+2024,11,Novembre,Provincia,150893,58019
+2024,12,Dicembre,"Trento, Monte Bondone e Altopiano di Pinè",63005,20808
+2024,12,Dicembre,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",96042,15199
+2024,12,Dicembre,Val di Fiemme e Val di Cembra,61491,53146
+2024,12,Dicembre,Val di Fassa,175456,79671
+2024,12,Dicembre,"San Martino di Castrozza, Primiero e Vanoi",50791,5927
+2024,12,Dicembre,"Valsugana, Tesino e Valle dei Mocheni",18440,2033
+2024,12,Dicembre,Altipiani cimbri e Vigolana,40351,11191
+2024,12,Dicembre,"Rovereto, Vallagarina e Monte Baldo",15625,3123
+2024,12,Dicembre,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",38906,25430
+2024,12,Dicembre,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",102996,50258
+2024,12,Dicembre,Val di Sole,102898,115678
+2024,12,Dicembre,Val di Non,16534,3016
+2024,12,Dicembre,Provincia,782535,385480
+2024,0,Total,"Trento, Monte Bondone e Altopiano di Pinè",481672,335816
+2024,0,Total,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",1157117,301043
+2024,0,Total,Val di Fiemme e Val di Cembra,647311,422929
+2024,0,Total,Val di Fassa,1902338,880847
+2024,0,Total,"San Martino di Castrozza, Primiero e Vanoi",609648,94858
+2024,0,Total,"Valsugana, Tesino e Valle dei Mocheni",271227,162931
+2024,0,Total,Altipiani cimbri e Vigolana,395603,171706
+2024,0,Total,"Rovereto, Vallagarina e Monte Baldo",188117,84515
+2024,0,Total,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",519362,1769505
+2024,0,Total,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",910227,425391
+2024,0,Total,Val di Sole,988146,804788
+2024,0,Total,Val di Non,183700,67632
+2024,0,Total,Provincia,8254468,5521961
+2025,1,Gennaio,"Trento, Monte Bondone e Altopiano di Pinè",48418,27431
+2025,1,Gennaio,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",160604,37812
+2025,1,Gennaio,Val di Fiemme e Val di Cembra,66851,81955
+2025,1,Gennaio,Val di Fassa,250452,193392
+2025,1,Gennaio,"San Martino di Castrozza, Primiero e Vanoi",78421,18631
+2025,1,Gennaio,"Valsugana, Tesino e Valle dei Mocheni",13347,2706
+2025,1,Gennaio,Altipiani cimbri e Vigolana,55918,50056
+2025,1,Gennaio,"Rovereto, Vallagarina e Monte Baldo",23453,5592
+2025,1,Gennaio,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",26807,20641
+2025,1,Gennaio,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",137903,91276
+2025,1,Gennaio,Val di Sole,159722,167633
+2025,1,Gennaio,Val di Non,12610,1043
+2025,1,Gennaio,Provincia,1034506,698168
+2025,2,Febbraio,"Trento, Monte Bondone e Altopiano di Pinè",33024,42597
+2025,2,Febbraio,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",129910,61207
+2025,2,Febbraio,Val di Fiemme e Val di Cembra,40103,118273
+2025,2,Febbraio,Val di Fassa,183531,257006
+2025,2,Febbraio,"San Martino di Castrozza, Primiero e Vanoi",66299,34127
+2025,2,Febbraio,"Valsugana, Tesino e Valle dei Mocheni",6751,3833
+2025,2,Febbraio,Altipiani cimbri e Vigolana,37076,66549
+2025,2,Febbraio,"Rovereto, Vallagarina e Monte Baldo",19146,9375
+2025,2,Febbraio,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",11780,9321
+2025,2,Febbraio,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",103404,129989
+2025,2,Febbraio,Val di Sole,92236,244758
+2025,2,Febbraio,Val di Non,7306,1039
+2025,2,Febbraio,Provincia,730566,978074
+2025,3,Marzo,"Trento, Monte Bondone e Altopiano di Pinè",32513,30622
+2025,3,Marzo,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",81763,23983
+2025,3,Marzo,Val di Fiemme e Val di Cembra,33875,69950
+2025,3,Marzo,Val di Fassa,125639,160751
+2025,3,Marzo,"San Martino di Castrozza, Primiero e Vanoi",41572,9269
+2025,3,Marzo,"Valsugana, Tesino e Valle dei Mocheni",7471,2536
+2025,3,Marzo,Altipiani cimbri e Vigolana,24610,24461
+2025,3,Marzo,"Rovereto, Vallagarina e Monte Baldo",16147,3556
+2025,3,Marzo,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",15356,35819
+2025,3,Marzo,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",101778,80315
+2025,3,Marzo,Val di Sole,100161,157836
+2025,3,Marzo,Val di Non,7255,2014
+2025,3,Marzo,Provincia,588140,601112
+2025,4,Aprile,"Trento, Monte Bondone e Altopiano di Pinè",27135,20466
+2025,4,Aprile,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",10789,6965
+2025,4,Aprile,Val di Fiemme e Val di Cembra,11563,16317
+2025,4,Aprile,Val di Fassa,11745,6665
+2025,4,Aprile,"San Martino di Castrozza, Primiero e Vanoi",6874,617
+2025,4,Aprile,"Valsugana, Tesino e Valle dei Mocheni",12671,8161
+2025,4,Aprile,Altipiani cimbri e Vigolana,3970,488
+2025,4,Aprile,"Rovereto, Vallagarina e Monte Baldo",7516,6585
+2025,4,Aprile,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",43170,152742
+2025,4,Aprile,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",11053,15442
+2025,4,Aprile,Val di Sole,7919,39579
+2025,4,Aprile,Val di Non,8139,5564
+2025,4,Aprile,Provincia,162544,279591
+2025,5,Maggio,"Trento, Monte Bondone e Altopiano di Pinè",27899,28046
+2025,5,Maggio,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",13718,17964
+2025,5,Maggio,Val di Fiemme e Val di Cembra,9783,8405
+2025,5,Maggio,Val di Fassa,10304,8328
+2025,5,Maggio,"San Martino di Castrozza, Primiero e Vanoi",7091,991
+2025,5,Maggio,"Valsugana, Tesino e Valle dei Mocheni",18956,18405
+2025,5,Maggio,Altipiani cimbri e Vigolana,4279,1555
+2025,5,Maggio,"Rovereto, Vallagarina e Monte Baldo",9447,7762
+2025,5,Maggio,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",49075,201636
+2025,5,Maggio,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",7596,3441
+2025,5,Maggio,Val di Sole,6668,4519
+2025,5,Maggio,Val di Non,9405,6553
+2025,5,Maggio,Provincia,174221,307605
+2025,6,Giugno,"Trento, Monte Bondone e Altopiano di Pinè",28753,41130
+2025,6,Giugno,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",88845,30566
+2025,6,Giugno,Val di Fiemme e Val di Cembra,49093,21643
+2025,6,Giugno,Val di Fassa,124013,58283
+2025,6,Giugno,"San Martino di Castrozza, Primiero e Vanoi",41741,7831
+2025,6,Giugno,"Valsugana, Tesino e Valle dei Mocheni",26625,29391
+2025,6,Giugno,Altipiani cimbri e Vigolana,25849,7599
+2025,6,Giugno,"Rovereto, Vallagarina e Monte Baldo",13853,9195
+2025,6,Giugno,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",49472,262926
+2025,6,Giugno,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",44040,13737
+2025,6,Giugno,Val di Sole,42745,25953
+2025,6,Giugno,Val di Non,12448,9980
+2025,6,Giugno,Provincia,547477,518234
+2025,7,Luglio,"Trento, Monte Bondone e Altopiano di Pinè",51986,43415
+2025,7,Luglio,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",216821,29714
+2025,7,Luglio,Val di Fiemme e Val di Cembra,142299,20183
+2025,7,Luglio,Val di Fassa,379902,66507
+2025,7,Luglio,"San Martino di Castrozza, Primiero e Vanoi",107868,13051
+2025,7,Luglio,"Valsugana, Tesino e Valle dei Mocheni",47330,29256
+2025,7,Luglio,Altipiani cimbri e Vigolana,77820,6975
+2025,7,Luglio,"Rovereto, Vallagarina e Monte Baldo",27475,10388
+2025,7,Luglio,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",65508,316825
+2025,7,Luglio,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",150399,31162
+2025,7,Luglio,Val di Sole,197557,26705
+2025,7,Luglio,Val di Non,32856,9653
+2025,7,Luglio,Provincia,1497821,603834
+2025,0,Total,"Trento, Monte Bondone e Altopiano di Pinè",249728,233707
+2025,0,Total,"Altopiano della Paganella, Piana della Rotaliana e San Lorenzo Dorsino",702450,208211
+2025,0,Total,Val di Fiemme e Val di Cembra,353567,336726
+2025,0,Total,Val di Fassa,1085586,750932
+2025,0,Total,"San Martino di Castrozza, Primiero e Vanoi",349866,84517
+2025,0,Total,"Valsugana, Tesino e Valle dei Mocheni",133151,94288
+2025,0,Total,Altipiani cimbri e Vigolana,229522,157683
+2025,0,Total,"Rovereto, Vallagarina e Monte Baldo",117037,52453
+2025,0,Total,"Garda trentino, Valle di Ledro, Terme di Comano e Valle dei Laghi",261168,999910
+2025,0,Total,"Madonna di Campiglio, Pinzolo, Val Rendena, Giudicarie centrali e Valle del Chiese",556173,365362
+2025,0,Total,Val di Sole,607008,666983
+2025,0,Total,Val di Non,90019,35846
+2025,0,Total,Provincia,4735275,3986618
