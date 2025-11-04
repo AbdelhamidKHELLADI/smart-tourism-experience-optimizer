@@ -2,6 +2,13 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 from datetime import datetime
+import logging
+logging.basicConfig(
+    filename='tourism_etl.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+SAVING_PATH="tourism_movement.csv"
 def extract(year):
     url=f"https://statweb.provincia.tn.it/movturistico/data.asp?db=annuarioturismo&sp=spArrPresEsAlbXAmbProvMes&var=0&a={year}"
     data = requests.get(url)
@@ -11,7 +18,7 @@ def extract(year):
     try:
         tables = table.find_all('table')
     except AttributeError:
-        print("No table found in the HTML content.")
+        logging.warning(f"No table found for year {year}")
         return None
 
     return tables[2]
@@ -41,16 +48,35 @@ def transform(presance,year):
     return df
 
 def load(df):
-    df.to_csv("tourism_movement.csv", index=False)
+    df.to_csv(SAVING_PATH, index=False)
 
 def tourism_mouvment():
     current_year = datetime.now().year
     all_data = pd.DataFrame()
-    for year in range(2022, current_year+1):
-        presance = extract(year)
-        if presance is not None:
-            df_year = transform(presance, year)
-            all_data = pd.concat([all_data, df_year], ignore_index=True)
+    current_year = datetime.now().year
+    all_data = pd.DataFrame()
+    try:
+        existing_df = pd.read_csv(SAVING_PATH)
+        if not existing_df.empty:
+            last_year = existing_df["Year"].max()
+            if last_year == current_year:
+                logging.info(f"Data is already up to date for year {current_year}. No new data to process.")
+                return
+            logging.info(f"Found existing data up to {last_year}. Resuming from {last_year + 1}")
+            all_data = existing_df.copy()
+        else:
+            last_year = 2021
+    except FileNotFoundError:
+        logging.info("No existing CSV found, starting from scratch.")
+        last_year = 2021
+
+        for year in range(last_year + 1, current_year + 1):
+            presance = extract(year)
+            if presance is not None:
+                df_year = transform(presance, year)
+                all_data = pd.concat([all_data, df_year], ignore_index=True)
+        logging.info(f"Successfully processed data for year {year}")
+
     load(all_data)
 
 if __name__ == "__main__":
