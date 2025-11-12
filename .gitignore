@@ -1,0 +1,8 @@
+data/
+mlruns/
+logs/
+*.ipynb
+.env
+*.pyc
+__pycache__/
+.cache*

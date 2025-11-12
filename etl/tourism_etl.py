@@ -1,17 +1,20 @@
+import os
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 from datetime import datetime
 import logging
 logging.basicConfig(
-    filename='tourism_etl.log',
+    filename='logs/tourism_etl.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
-SAVING_PATH="tourism_movement.csv"
+SAVING_PATH = os.getenv("TOURISM_MOVEMENT_PATH", "data/tourism_movement.csv")
+
+
 def extract(year):
     url=f"https://statweb.provincia.tn.it/movturistico/data.asp?db=annuarioturismo&sp=spArrPresEsAlbXAmbProvMes&var=0&a={year}"
-    data = requests.get(url)
+    data = requests.get(url,timeout=60)
     soup = BeautifulSoup(data.text, 'html.parser')
 
     table=soup.find('table') 
@@ -55,6 +58,7 @@ def tourism_mouvment():
     all_data = pd.DataFrame()
     current_year = datetime.now().year
     all_data = pd.DataFrame()
+    changed=False
     try:
         existing_df = pd.read_csv(SAVING_PATH)
         if not existing_df.empty:
@@ -70,16 +74,21 @@ def tourism_mouvment():
         logging.info("No existing CSV found, starting from scratch.")
         last_year = 2021
 
-        for year in range(last_year + 1, current_year + 1):
-            presance = extract(year)
-            if presance is not None:
-                df_year = transform(presance, year)
-                all_data = pd.concat([all_data, df_year], ignore_index=True)
-        logging.info(f"Successfully processed data for year {year}")
+    for year in range(last_year , current_year + 1):
+        presance = extract(year)
+        if presance is not None:
+            df_year = transform(presance, year)
+            all_data = pd.concat([all_data, df_year], ignore_index=True)
+    all_data.drop_duplicates(inplace=True)
+    changed=True
+    logging.info(f"Successfully processed data for year {year}")
 
     load(all_data)
 
+    return changed
+
 if __name__ == "__main__":
+
     tourism_mouvment()
 
 
