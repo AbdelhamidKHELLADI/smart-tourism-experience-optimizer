@@ -114,8 +114,8 @@ def transform(path=PATH):
     return pd.concat(all_regions_df, ignore_index=True)
 
 # ---------------------- Preprocess ----------------------
-def preprocess():
-    df = transform(PATH)
+def preprocess(path=PATH):
+    df = transform(path)
     preprocessed = pd.read_csv(PREPROCESSED_PATH)
 
     df["season"] = df["month"].apply(get_season)
@@ -133,31 +133,36 @@ def preprocess():
     return df
 
 def categorize_experience(score):
-    if score < 0.2:
+    if score < 0.1:
         return "Not Ideal"
     elif score < 0.4:
         return "Quiet Season"
     elif score < 0.6:
         return "Moderate Season"
-    elif score < 0.8:
+    elif score < 0.75:
         return "Popular Season"
     else:
         return "Peak Season"
 
-def predict():
+def predict(df):
     model = mlflow.pyfunc.load_model(MLFLOW_MODEL_URI)
-    df = preprocess()
 
+    region_cols=[col for col in df.columns if col.startswith("region_")]
     X = df[[
         "Month_Num", "mobility_index", "weather_score",
         "temperature_2m_mean", "cloud_cover_mean",
         "snowfall_sum", "snowy_day"
-    ] + [col for col in df.columns if col.startswith("region_")]]
+    ] + region_cols]
 
     preds = model.predict(X)
+    return preds
+def save_new_preds(df,preds):
     df["tourism_index"] = preds
     df["experience_level"] = df["tourism_index"].apply(categorize_experience)
-
+    region_cols=[col for col in df.columns if col.startswith("region_")]
+    df["Region"]=df[region_cols].idxmax(axis=1).str.replace("region__","")
+    df["Region"]=df["Region"].str.replace('_', " ")
+    df.columns = df.columns.str.strip()
     try:
         existing_pred = pd.read_csv(EXISTING_PREDS_PATH)
         if not existing_pred.empty:
@@ -178,6 +183,11 @@ def predict():
         df.to_csv(EXISTING_PREDS_PATH, index=False)
 
     
+def main():
+    df=preprocess(PATH)
+    preds=predict(df)
+    save_new_preds(df,preds)
+
 
 if __name__ == "__main__":
-    predict()
+    main()

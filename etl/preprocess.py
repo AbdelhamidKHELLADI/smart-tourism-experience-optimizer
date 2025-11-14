@@ -1,5 +1,5 @@
 import pandas as pd
-from utils.preprocess_utils import merge_weather_tourism,compute_weather_score,get_season
+from utils.preprocess_utils import merge_weather_tourism,compute_weather_score,get_season,categorize_experience
 import json
 import os
 
@@ -46,7 +46,7 @@ def preprocess():
     df['tourism_index']=(df["presence_index"]*0.4+df["weather_score"]*0.3+df['mobility_index']*0.3)
     df["year_month"]=df["Year"].astype(str)+'-'+df['Month_Num'].astype(str)
     df.set_index("year_month",inplace=True)
-
+    df["experience_level"] = df["tourism_index"].apply(categorize_experience)
     df["Region"] = df["Region"].str.replace(",", "", regex=False)
     df["Region"] = df["Region"].str.replace(" ", "_", regex=False)
 

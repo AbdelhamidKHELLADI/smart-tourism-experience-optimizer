@@ -63,3 +63,15 @@ def compute_weather_score(row,scaling_params,n_days=30):
         )
         
     return max(0, min(1, score))
+
+def categorize_experience(score):
+    if score < 0.1:
+        return "Not Ideal"
+    elif score < 0.4:
+        return "Quiet Season"
+    elif score < 0.6:
+        return "Moderate Season"
+    elif score < 0.75:
+        return "Popular Season"
+    else:
+        return "Peak Season"
