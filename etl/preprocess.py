@@ -1,7 +1,10 @@
 import pandas as pd
 from utils.preprocess_utils import merge_weather_tourism,compute_weather_score,get_season,categorize_experience
-import json
+from utils.s3_utils import save_to_s3,save_json_to_s3
 import os
+BUCKET_NAME=os.getenv("TOURISM_BUCKET")
+if not BUCKET_NAME:
+    raise RuntimeError("TOURISM_BUCKET env var not set (BUCKET_NAME is required)")
 
 import logging
 logging.basicConfig(   
@@ -9,18 +12,20 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s')
 
-TOURISM_PATH = os.getenv("TOURISM_DATA_PATH", "data/tourism_movement_with_gtfs.csv")
+TOURISM_PATH = os.getenv("TOURISM_DATA_PATH", f"tourism_movement_with_gtfs.csv")
 
 
 def preprocess():
-    df=merge_weather_tourism(TOURISM_PATH)
+    df=merge_weather_tourism(TOURISM_PATH,BUCKET_NAME)
 
     df["mobility_index"] = (
         df.groupby("Region")["num_trips"]
         .transform(lambda x: (x - x.min()) / (x.max() - x.min()))
     )
     df["mobility_index"] = df["mobility_index"].fillna(0)
-    df[["Region","Month_Num","mobility_index"]].drop_duplicates().to_csv("data/mobility_index_per_region.csv",index=False)
+    df_tmp=df[["Region","Month_Num","mobility_index"]].drop_duplicates()
+    save_to_s3(df_tmp,BUCKET_NAME,"mobility_index_per_region.csv")
+    
     logging.info("mobility index per region saved sucessfuly")
 
     MAX_SNOWFALL = df["snowfall_sum"].max()
@@ -30,9 +35,8 @@ def preprocess():
     "max_wind_speed": float(MAX_WIND)
     }
 
-    with open("data/scaling_params.json", "w") as f:
-        json.dump(scaling_params, f)
-  
+
+    save_json_to_s3(scaling_params,BUCKET_NAME,"scaling_params.json")
 
     df["season"] = df["Month_Num"].apply(get_season)
 
@@ -51,8 +55,8 @@ def preprocess():
     df["Region"] = df["Region"].str.replace(" ", "_", regex=False)
 
     df=pd.get_dummies(df,columns=["Region"],prefix='region_')
-    df.to_csv('data/preprocessed.csv')
-    logging.info("Created data/preprocessed.csv for training ")
+    save_to_s3(df,BUCKET_NAME,'preprocessed.csv')
+    logging.info("Created preprocessed.csv for training ")
 
 if __name__ == "__main__":
     preprocess()

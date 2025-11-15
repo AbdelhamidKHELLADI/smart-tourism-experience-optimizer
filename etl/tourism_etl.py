@@ -3,13 +3,18 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 from datetime import datetime
+from utils.s3_utils import save_to_s3,read_from_s3
+BUCKET_NAME=os.getenv("TOURISM_BUCKET")
+if not BUCKET_NAME:
+    raise RuntimeError("TOURISM_BUCKET env var not set (BUCKET_NAME is required)")
+
 import logging
 logging.basicConfig(
     filename='logs/tourism_etl.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
-SAVING_PATH = os.getenv("TOURISM_MOVEMENT_PATH", "data/tourism_movement.csv")
+SAVING_PATH = os.getenv("TOURISM_MOVEMENT_PATH", "tourism_movement.csv")
 
 
 def extract(year):
@@ -51,7 +56,7 @@ def transform(presance,year):
     return df
 
 def load(df):
-    df.to_csv(SAVING_PATH, index=False)
+    save_to_s3(df,BUCKET_NAME,SAVING_PATH)
 
 def tourism_mouvment():
     current_year = datetime.now().year
@@ -60,7 +65,7 @@ def tourism_mouvment():
     all_data = pd.DataFrame()
     changed=False
     try:
-        existing_df = pd.read_csv(SAVING_PATH)
+        existing_df = read_from_s3(BUCKET_NAME,SAVING_PATH)
         if not existing_df.empty:
             last_year = existing_df["Year"].max()
             if last_year == current_year:

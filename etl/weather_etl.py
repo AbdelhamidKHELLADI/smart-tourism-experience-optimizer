@@ -4,15 +4,18 @@ import logging
 import os
 import requests_cache
 from retry_requests import retry
-
+from utils.s3_utils import save_to_s3
 # Load environment variables safely (provide defaults for local testing)
 URL = os.getenv("OPENMETEO_API_URL", "https://archive-api.open-meteo.com/v1/archive")
-PATH = os.getenv("REGIONS_BOUNDARIES_PATH", "data/regions_boundries.json")
+PATH = os.getenv("REGIONS_BOUNDARIES_PATH", "regions_boundries.json")
 START_DATE = os.getenv("WEATHER_START_DATE", "2022-01-01")
 END_DATE = os.getenv("WEATHER_END_DATE", "2025-07-31")
 CACHE_DIR = os.getenv("REQUESTS_CACHE_DIR", ".cache")
 LOG_PATH = os.getenv("WEATHER_LOG_PATH", "logs/weather_etl.log")
 DATA_DIR = os.getenv("DATA_DIR", "data")
+BUCKET_NAME=os.getenv("TOURISM_BUCKET")
+if not BUCKET_NAME:
+    raise RuntimeError("TOURISM_BUCKET env var not set (BUCKET_NAME is required)")
 
 # Setup logging
 logging.basicConfig(
@@ -89,7 +92,12 @@ def transform(path):
             logging.info(f"Extracting weather data for region: {region}")
             df_tmp = extract(lat, lon)
             logging.info(f"Successfully extracted weather data for region: {region} from {START_DATE} to {END_DATE}")
-            df_tmp.to_csv(f"{DATA_DIR}/weather_data_{region}.csv", index=False)
+            try:
+                save_to_s3(df_tmp, BUCKET_NAME, f"weather_data_{region}.csv")
+            except Exception as e:
+                logging.error(f"Failed to save weather data for {region} to S3: {e}")
+                continue
+
 
 def weather_etl(path=PATH):
     logging.info("Starting weather ETL process")

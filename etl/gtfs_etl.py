@@ -3,6 +3,11 @@ import pandas as pd
 import geopandas as gpd
 from utils.gtfs_utils import normalize_text, merge_calendar_and_exceptions, expand_dates
 import json
+from utils.s3_utils import save_to_s3,save_json_to_s3
+
+BUCKET_NAME=os.getenv("TOURISM_BUCKET")
+if not BUCKET_NAME:
+    raise RuntimeError("TOURISM_BUCKET env var not set (BUCKET_NAME is required)")
 
 
 PATH = os.getenv("GTFS_DATA_PATH")
@@ -111,16 +116,18 @@ def add_mobility_index(tourism_movement_path, monthly_trips):
         sept_value = merged.loc[(merged['Region'] == region) & (merged['Month_Num'] == 9), 'num_trips'].values
         if len(sept_value) > 0:
             merged.at[idx, 'num_trips'] = sept_value[0]
-    merged.to_csv("data/tourism_movement_with_gtfs.csv", index=False)
+
+    save_to_s3(merged,BUCKET_NAME,"tourism_movement_with_gtfs.csv")
+    
 
 
 def main():
     gtfs_data = load_gtfs_data(PATH)
     monthly_trips, regions_with_boundries = process_gtfs_data(gtfs_data)
     add_mobility_index("data/tourism_movement.csv", monthly_trips)
-    json_path = "data/regions_boundries.json"
-    with open(json_path, "w", encoding="utf-8") as f:
-        json.dump(regions_with_boundries, f, ensure_ascii=False, indent=4)
+
+    json_path = "regions_boundries.json"
+    save_json_to_s3(regions_with_boundries,BUCKET_NAME,json_path)
 
 
 if __name__ == "__main__":

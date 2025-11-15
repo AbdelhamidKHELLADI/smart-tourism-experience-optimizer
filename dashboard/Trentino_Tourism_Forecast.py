@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 import datetime
+from utils.s3_utils import read_from_s3
 
 # -----------------------------
 # Config
@@ -12,20 +13,22 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+BUCKET_NAME=os.getenv("TOURISM_BUCKET")
+if not BUCKET_NAME:
+    raise RuntimeError("TOURISM_BUCKET env var not set (BUCKET_NAME is required)")
 
 
-
-DATA_PATH = os.getenv("FORECAST_CSV_PATH", "data/predictions.csv")
+DATA_PATH = os.getenv("FORECAST_CSV_PATH", "predictions.csv")
 CURRENT_WEEK = datetime.datetime.now().isocalendar().week
 CURRENT_YEAR = datetime.datetime.now().isocalendar().year
 
 @st.cache_data
-def load_forecast():
-    df = pd.read_csv(DATA_PATH)
+def loading():
+    df = read_from_s3(BUCKET_NAME,DATA_PATH)
     # Expected columns: ['year','week','Region','tourism_index','experience_level']
     return df[["year", "week", "Region", "tourism_index", "experience_level"]]
 
-df = load_forecast()
+df = loading()
 
 experience_styles = {
     "Not ideal": {"color": "#f2f6fa", "emoji": "😴"},

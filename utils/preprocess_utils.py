@@ -1,12 +1,13 @@
 import pandas as pd
+from utils.s3_utils import save_to_s3,read_from_s3
 
-def merge_weather_tourism(tourism_path):
-    tourism=pd.read_csv(tourism_path)
+def merge_weather_tourism(tourism_path,bucket_name):
+    tourism=read_from_s3(bucket_name,tourism_path)
     regions=tourism['Region'].unique()
     final_df=pd.DataFrame()
     for region in regions:
         if region.lower()!="provincia":
-            weather_data=pd.read_csv(f"data/weather_data_{region}.csv")
+            weather_data=read_from_s3(bucket_name,f"weather_data_{region}.csv")
             weather_data["date"]=pd.to_datetime(weather_data["date"])
             weather_data['rainy_day']=weather_data['rain_sum']>0
             weather_data['snowy_day']=weather_data['snowfall_sum']>0
