@@ -9,3 +9,4 @@ __pycache__/
 lambda_package.zip
 models/
 Makefile
+.pytest_cache/

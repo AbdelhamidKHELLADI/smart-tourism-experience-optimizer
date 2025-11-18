@@ -26,7 +26,7 @@ COPY --from=build /build/python /function/
 COPY src/lambda_package /function/
 COPY src/utils/preprocess_utils.py /function/utils
 COPY src/utils/s3_utils.py /function/utils
-
+COPY src/utils/__init__.py /function/utils
 
 ENTRYPOINT [ "/usr/local/bin/python", "-m", "awslambdaric" ]
 CMD [ "handler.lambda_handler" ]
