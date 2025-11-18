@@ -10,7 +10,7 @@ WORKDIR /build
 
 RUN pip install --no-cache-dir awslambdaric --target /build/python
 
-COPY requirements.txt .
+COPY src/lambda_package/requirements.txt .
 
 RUN pip install --no-cache-dir \
     -r requirements.txt \
@@ -23,7 +23,10 @@ WORKDIR /function
 
 COPY --from=build /build/python /function/
 
-COPY . /function/
+COPY src/lambda_package /function/
+COPY src/utils/preprocess_utils.py /function/utils
+COPY src/utils/s3_utils.py /function/utils
+
 
 ENTRYPOINT [ "/usr/local/bin/python", "-m", "awslambdaric" ]
 CMD [ "handler.lambda_handler" ]
