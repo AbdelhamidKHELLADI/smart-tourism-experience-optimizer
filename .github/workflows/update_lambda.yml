@@ -28,18 +28,18 @@ jobs:
 
     - name: Build Docker image
       run: |
-        IMAGE_TAG=${latest}
+        IMAGE_TAG=latest
         docker buildx build --platform linux/amd64 --provenance=false -t $ECR_REPOSITORY:$IMAGE_TAG lambda_package/ 
         docker tag $ECR_REPOSITORY:$IMAGE_TAG ${{ steps.login-ecr.outputs.registry }}/${ECR_REPOSITORY}:$IMAGE_TAG
 
     - name: Push Docker image to ECR
       run: |
-        IMAGE_TAG=${latest}
+        IMAGE_TAG=latest
         docker push ${{ steps.login-ecr.outputs.registry }}/${ECR_REPOSITORY}:$IMAGE_TAG
 
     - name: Update Lambda function
       run: |
-        IMAGE_TAG=${GITHUB_SHA::8}
+        IMAGE_TAG=latest
         aws lambda update-function-code \
           --function-name $LAMBDA_FUNCTION \
           --image-uri ${{ steps.login-ecr.outputs.registry }}/${ECR_REPOSITORY}:$IMAGE_TAG
