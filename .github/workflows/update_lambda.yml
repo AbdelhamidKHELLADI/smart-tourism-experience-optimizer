@@ -29,7 +29,7 @@ jobs:
     - name: Build Docker image
       run: |
         IMAGE_TAG=latest
-        docker buildx build --platform linux/amd64 --provenance=false -t $ECR_REPOSITORY:$IMAGE_TAG src/lambda_package/ 
+        docker buildx build --platform linux/amd64 --provenance=false -f src/lambda_package/Dockerfile -t $ECR_REPOSITORY:$IMAGE_TAG .
         docker tag $ECR_REPOSITORY:$IMAGE_TAG ${{ steps.login-ecr.outputs.registry }}/${ECR_REPOSITORY}:$IMAGE_TAG
 
     - name: Push Docker image to ECR
