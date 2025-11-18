@@ -9,9 +9,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      AWS_REGION: eu-central-1            
-      ECR_REPOSITORY: tourism-experience   
-      LAMBDA_FUNCTION: tourism_weekly_forecast 
+      AWS_REGION: eu-central-1       
+      ECR_REPOSITORY: tourism-experience
+      LAMBDA_FUNCTION: tourism_weekly_forecast
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
