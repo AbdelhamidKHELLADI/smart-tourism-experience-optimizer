@@ -21,7 +21,9 @@ if not BUCKET_NAME:
 DATA_PATH = os.getenv("FORECAST_CSV_PATH", "predictions.csv")
 CURRENT_WEEK = datetime.datetime.now().isocalendar().week
 CURRENT_YEAR = datetime.datetime.now().isocalendar().year
-
+START_DATE=datetime.date.fromisocalendar(CURRENT_YEAR, CURRENT_WEEK, 1)
+END_DATE=datetime.date.fromisocalendar(CURRENT_YEAR, CURRENT_WEEK+1, 7)
+MID_DATE=datetime.date.fromisocalendar(CURRENT_YEAR, CURRENT_WEEK+1, 1)
 @st.cache_data
 def loading():
     df = read_from_s3(BUCKET_NAME,DATA_PATH)
@@ -81,57 +83,84 @@ Quickly see which regions offer the **best conditions to visit** based on weathe
 # -----------------------------
 st.markdown("## 🎯 Choose Your Forecast Options")
 
-col1, col2 = st.columns(2)
+mode = st.radio(
+    "Search Mode:",
+    ["By Week", "By Date"],
+    horizontal=True
+)
+if mode == "By Week":
+    col1, col2 = st.columns(2)
 
-with col1:
-    week_choice = st.selectbox(
-        "Select forecast period:",
-        ["Next week", "Week after next", "Both"],
-        index=0,
-        help="choose which week(s) to view"
-    )
+    with col1:
+        week_choice = st.selectbox(
+            "Select forecast period:",
+            ["This week", "Next week", "Both"],
+            index=0,
+            help="choose which week(s) to view"
+        )
 
-with col2:
-    region_choice = st.selectbox(
-        "Focus on a specific region (optional):",
-        ["All regions"] + sorted(df["Region"].unique().tolist()),
-        help="leave as 'All regions' to see top performers"
-    )
-
-
-
-
-def get_forecast_weeks(current_week, current_year):
-    next_week = current_week + 1
-    next_week_year = current_year
-    after_next_week = current_week + 2
-    after_next_week_year = current_year
+    with col2:
+        region_choice = st.selectbox(
+            "Focus on a specific region (optional):",
+            ["All regions"] + sorted(df["Region"].unique().tolist()),
+            help="leave as 'All regions' to see top performers"
+        )
+    
+    def get_forecast_weeks(current_week, current_year,week_choice):
+        next_week = current_week +1
+        next_week_year = current_year
 
 
-    if next_week > 52:
-        next_week = 1
-        next_week_year += 1
-    if after_next_week > 52:
-        after_next_week = after_next_week - 52
-        after_next_week_year += 1
+        if next_week > 52:
+            next_week = 1
+            next_week_year += 1
 
-    if week_choice == "Next week":
-        return [(next_week_year, next_week)]
-    elif week_choice == "Week after next":
-        return [(after_next_week_year, after_next_week)]
-    else:
-        return [(next_week_year, next_week), (after_next_week_year, after_next_week)]
 
-forecast_weeks = get_forecast_weeks(CURRENT_WEEK, CURRENT_YEAR)
+        if week_choice == "This week":
+            return [(current_year, current_week)]
+        elif week_choice == "Next week":
+            return [(next_week_year, next_week)]
+        else:
+            return [(current_year, current_week), (next_week_year, next_week)]
 
-# -----------------------------
-# Filter Data
-# -----------------------------
-filtered_df = df[df.apply(lambda r: (r["year"], r["week"]) in forecast_weeks, axis=1)]
+    forecast_weeks = get_forecast_weeks(CURRENT_WEEK, CURRENT_YEAR,week_choice=week_choice)
+
+
+else:
+    col1, col2 = st.columns(2)
+
+    with col1:
+        date_range = st.date_input("Select Date range",
+                                    value=(START_DATE, END_DATE),
+                                    min_value=START_DATE,
+                                    max_value=END_DATE)
+        if len(date_range) == 1:
+            date_range = (date_range[0], END_DATE)
+
+
+    with col2:
+        region_choice = st.selectbox(
+            "Focus on a specific region (optional):",
+            ["All regions"] + sorted(df["Region"].unique().tolist()),
+            help="leave as 'All regions' to see top performers"
+        )
+    
+    forecast_weeks=[]
+    if date_range[0] < MID_DATE:
+        forecast_weeks.append((CURRENT_YEAR,CURRENT_WEEK))
+    if date_range[1] >= MID_DATE:
+        if CURRENT_WEEK+1 > 52:
+            forecast_weeks.append((CURRENT_YEAR+1,1))
+        else:
+            forecast_weeks.append((CURRENT_YEAR,CURRENT_WEEK+1))
+
+
+
+
+filtered_df = df[df[["year", "week"]].apply(tuple, axis=1).isin(forecast_weeks)]
 
 if region_choice != "All regions":
     filtered_df = filtered_df[filtered_df["Region"] == region_choice]
-
 
 
 # -----------------------------
@@ -143,6 +172,7 @@ else:
     if region_choice == "All regions":
         for (yr, wk) in forecast_weeks:
             st.markdown(f"### 🗓️ Top Regions for Week {wk}, {yr}")
+            st.markdown(f"#### From {datetime.date.fromisocalendar(yr, wk, 1)} to {datetime.date.fromisocalendar(yr, wk, 7)}")
 
             week_df = (
                 filtered_df[(filtered_df["year"] == yr) & (filtered_df["week"] == wk)]

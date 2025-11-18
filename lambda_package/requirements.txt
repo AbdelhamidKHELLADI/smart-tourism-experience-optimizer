@@ -1,0 +1,8 @@
+numpy==1.26.4
+pandas==2.1.4
+boto3==1.33.13
+openmeteo-requests
+retry-requests
+xgboost==2.0.3
+requests
+requests_cache
