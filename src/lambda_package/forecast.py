@@ -171,7 +171,7 @@ def save_new_preds(df,preds):
             logging.info(f"Found prediction until week {existing_pred.week.max()} of {existing_pred.year.max()}")
             if existing_pred.year.max() <= df.year.max():
                 if existing_pred.week.max() < df.week.max():
-                    new_df = pd.concat([existing_pred, df], ignore_index=True).drop_duplicates(subset=["year", "week", "Region"], keep="first")
+                    new_df = pd.concat([existing_pred, df], ignore_index=True).drop_duplicates(subset=["year", "week", "Region"], keep="last")
                     save_to_s3(new_df,BUCKET_NAME,EXISTING_PREDS_PATH)
                     logging.info(f"Predictions added from week {existing_pred.week.max()} to {df.week.max()} of {df.year.max()}")
 

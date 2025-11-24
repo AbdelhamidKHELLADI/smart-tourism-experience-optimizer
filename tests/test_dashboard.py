@@ -1,5 +1,5 @@
 
-from src.dashboard.Trentino_Tourism_Forecast import get_forecast_weeks  
+from dashboard.utils.data_utils import get_forecast_weeks
 
 def test_next_week_normal_case():
     """Week 10 → Week 11"""
