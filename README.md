@@ -141,6 +141,9 @@ This introduces bias.
 
 * If mobility/tourism habits change, the model may degrade without warning.
 
+**5. Predictions available only for the next two weeks**
+* The system currently forecasts only this week and next week.
+
 ### 🚀 Future Improvements
 #### 🔧 Model & Data Enhancements
 
@@ -168,6 +171,8 @@ This introduces bias.
 
 - European-wide tourism forecast network
 
+### Extend Forecast Horizon
+* Use a paid api for a longer period of forecasted data
 
 ## 📦 Deployment
 **Dashboard:**
