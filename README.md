@@ -1,121 +1,196 @@
-# Smart Tourism Experience Optimizer
+# Trentino Tourism Forecast – Weekly Tourism Demand Prediction
 
-An end-to-end project that ingests GTFS transit data, tourism movement data and weather forecasts to build weekly tourism presence forecasts per region in Trentino. The repository contains ETL scripts, a Streamlit dashboard, an AWS Lambda-based forecasting service, and CI/CD workflows to build and deploy the Lambda.
+## 📌 Project Overview
 
-This README documents how to run the project locally, what the components are, environment variables and recommended next steps.
+This project predicts a weekly Tourism Experience Index for Trentino, Italy — an aggregated indicator derived from public mobility, weather, and accommodation data. 
+The system automatically fetches data, preprocesses it, generates weekly forecasts, and updates a live dashboard.
 
-## Repository layout (important folders)
-
-- `src/etl/` — ETL pipelines (GTFS, weather, tourism preprocessing)
-- `src/lambda_package/` — Lambda function code + Dockerfile to build container image for AWS Lambda
-- `src/dashboard/` — Streamlit dashboards and assets
-- `dags/` — Airflow DAGs (yearly pipeline)
-- `data/` — (expected) input and output CSVs used by dashboard and tests
-- `mlruns/` — local MLflow models and artifacts (optional, typically large)
-- `.github/workflows/` — CI/CD workflows (build & push Lambda, upload dashboard)
-
-
-## Quickstart — development (local)
-
-Requirements:
-- Python 3.11
-- Docker (optional: to build lambda image)
-- AWS CLI configured (if you want to run AWS steps locally)
-
-1) Create a virtual environment and install dependencies (recommended):
-
+## 📂 Repository Structure
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r src/dashboard/requirements.txt
-# and any other requirements you need for ETL/testing
+├── src
+│   ├── dashboard/                 # Streamlit or web dashboard
+│   ├── etl/                       # All data preprocessing and cleaning scripts
+│   ├── lambda_package/            # Dockerized Lambda for automated weekly forecasting
+│   └── train_xgboost.py           # ML model training
+├── utils/                         # Shared utilities
+├── tests/                         # Pytest unit tests
+└── README.md
 ```
+## 🧠 How It Works
+**1. Data Ingestion** 
 
-2) Run Streamlit dashboards locally
+* Collects weather, GTFS public transport, and tourism movement datasets.
+* Cleans, aggregates, and aligns them by week-year.
+* Stores intermediate data in cloud storage.
 
-```bash
-# From repository root
-streamlit run src/dashboard/Weekly_Forecast.py
-# or
-streamlit run src/dashboard/Home.py
-```
-
-3) Run ETL locally (quick test)
-
-```bash
-python src/etl/main_etl.py
-```
-
-Notes: many ETL scripts expect environment variables for S3 bucket names and AWS credentials. See the Environment Variables section below.
+**2. Machine Learning Model**
 
 
-## Build & Deploy Lambda (CI/CD)
+* Uses an XGBoost-based predictor.
 
-The repository includes a GitHub Actions workflow `.github/workflows/update_lambda.yml` that builds the Lambda container image and deploys it to AWS ECR and Lambda. The workflow is configured to run on pushes to `src/lambda_package/**`.
+* Trains on features from mobility + weather + past tourism data.
+* Produces next week’s predicted Tourism Experience Index.
+* The model achieved 0.05 MAE on the test set, indicating high accuracy for weekly index forecasting.
 
-Secrets required in GitHub repository settings:
-- `AWS_ACCESS_KEY_ID`
-- `AWS_SECRET_ACCESS_KEY`
-- (optional) `LAMBDA_EXEC_ROLE_ARN` if you want automation to create the function
+**3. Weekly Forecast Automation (AWS Lambda + ECR)**
 
-Important: The workflow builds an image for `linux/amd64` and pushes it to the account's ECR. Make sure the function exists (or use the script to create it).
+* A Dockerized AWS Lambda (running via ECR image) triggered every week.
 
+* Runs the forecasting script (forecast.py) and writes results to storage.
 
-## Environment variables used by code
+**4. Dashboard**
 
-Several modules rely on environment variables; set these in your environment or in your deployment system:
+* Containerised dashboard running on EC2 (Free Tier eligible).
 
-- `TOURISM_BUCKET` — S3 bucket used for reading/writing preprocessed and prediction CSVs
-- `FORECAST_CSV_PATH` — path within the bucket or local path for predictions.csv (default `predictions.csv`)
-- `REGIONS_BOUNDARIES_PATH` — JSON of region bounding boxes used by the forecast
-- `EXISTING_PREDS_PATH` — path to existing predictions CSV file
-- `PREPROCESSED_PATH` — path to preprocessed mobility CSV
-- `SCALING_PARAMS_PATH` — JSON path for scaling parameters used in weather scoring
-- `WEEKLY_DATA_PATH` — key used to store weekly input data for predictions
-- `MLFLOW_MODEL_URI` — (optional) MLflow URI if loading a model through MLflow
+* Fetches the latest predictions and visualises them.
 
-Set these locally e.g.:
+## ☁️ AWS Architecture
 
-```bash
-export TOURISM_BUCKET=my-bucket-name
-export FORECAST_CSV_PATH=data/predictions.csv
-```
+The system uses a simplified cloud pipeline:
 
+### Compute
 
-## Troubleshooting common errors
+**AWS Lambda (Docker-based)**
+* Runs forecasting tasks weekly.
 
-- "sklearn needs to be installed" in Lambda — solved by using `xgboost.Booster` directly to avoid scikit-learn dependency. See `src/lambda_package/forecast.py`.
-- `ResourceNotFoundException` when updating Lambda — means the Lambda function does not exist in the account/region used by the workflow. Confirm `aws sts get-caller-identity` and `aws lambda get-function` and create the function if missing.
-- Streamlit shows `Running load_data()` in spinner — this occurs when calling a `@st.cache_data` function inside a spinner. Use a session_state-based loader to suppress that status (see `src/dashboard/Weekly_Forecast.py`).
+**Amazon EC2** 
+* Hosts the tourism analytics dashboard.
 
+### Orchestration
 
-## Tests
+**EventBridge Trigger**
+* Schedules weekly Lambda execution.
 
-There are no automated tests included yet. Recommended additions:
-- Unit tests for preprocess & utils using `pytest`
-- A smoke test for the Lambda predict path (load small model + data)
+### Container Registry
 
+**Amazon ECR**
+* Stores the Lambda and dashboard image.
 
-## Future features (ideas & roadmap)
+### Storage
 
-- Improve Airflow DAG: break downstream steps into separate tasks with retries, alerts and monitoring
-- Add integration tests for the Lambda image and local E2E test harness
-- Shared caching for forecasts (Redis) for faster dashboard load across users
-- Add a lightweight REST API (FastAPI) to serve forecasts and metadata
-- Add user authentication on the dashboard and multi-tenant features
-- Add end-to-end automated model promotion (staging -> production) using MLflow
+**S3**
+* Store aggregated datasets or predictions.
 
 
-## Contributing
+## 📊 Datasets Used
 
-Open issues and pull requests are welcome. If you'd like help integrating with a cloud account, consider adding automation secrets and a test account to the repo settings.
+All datasets are publicly available and licensed under open data / Creative Commons terms.
+
+**Accommodation & Tourism Arrivals (Provincia Autonoma di Trento)**
+
+🔗 [https://statweb.provincia.tn.it/movturistico/index.asp](https://statweb.provincia.tn.it/movturistico/index.asp)
+
+* Contains monthly tourism arrivals/presences.
+
+**Public Transport Mobility – GTFS (Trentino Trasporti)**
+
+🔗 [https://www.trentinotrasporti.it/it/opendata-it](https://www.trentinotrasporti.it/it/opendata-it)
+
+* Bus routes, stops, and timetables.
+
+**Weather Data – Open-Meteo API**
+
+🔗 [https://open-meteo.com](https://open-meteo.com)
+
+* Historical and forecasted meteorological parameters.
+
+**All datasets are reused under their respective public licenses.**
+- Attribution: Provincia Autonoma di Trento (CC-BY), Trentino Trasporti Open Data, Open-Meteo API.
+
+## ✨ Features
+### ✅ Current Features
+
+- Automated weekly forecasting using AWS Lambda
+
+- Containerised dashboard deployed on AWS EC2
+
+- Clean separation between ETL, model, and dashboard
+
+- Public datasets only — no private data required
+
+- Portable via Docker and reproducible
+
+### ⚠️ Limitations
+
+Every real-world forecasting system has constraints—here are the main ones for this project:
+
+**1. Long Feedback Loop**
+
+Tourism data (arrivals/presences) is often released seasonally, causing lag in the ground truth collection.
+
+**2. Mobility Proxy Limited to Public Transport**
+
+GTFS data captures only bus usage, missing:
+
+* Cars
+
+* Bikes
+
+* Trains
+
+* Car rentals
+
+* Camping mobility
+This introduces bias.
+
+**3. Model Generalisation Bound to Region**
+
+* Currently centred on Trentino only, not yet suitable for national or EU-level forecasting.
+
+**4. No Real-Time Drift Detection**
+
+* If mobility/tourism habits change, the model may degrade without warning.
+
+### 🚀 Future Improvements
+#### 🔧 Model & Data Enhancements
+
+* Add event-based features (festivals, conferences, sports events, etc.)
+
+* Integrate more mobility layers (bike-sharing, car traffic, train ridership)
+
+#### 📉 Data Quality & Frequency
+
+* Collaborate with local authorities to provide higher-frequency tourism data (weekly instead of monthly)
+
+* Implement data drift detection periodically 
+
+#### 🔄 Automatic Retraining
+
+* Add a scheduled retraining pipeline (via AWS Step Functions + SageMaker or GitHub Actions)
+
+### 🌍 Scalability
+
+* Extend the project to:
+
+- Whole Italy
+
+- Alpine region
+
+- European-wide tourism forecast network
 
 
-## Contact
+## 📦 Deployment
+**Dashboard:**
 
-If you need hands-on assistance with deployment or CI tweaks, tell me what environment you deploy to (AWS account/region) and I can prepare a PR to update workflows or add helper scripts.
+- Deployed via Docker on EC2.
 
+**Forecast Lambda:**
+
+- Build Docker image → push to ECR
+
+- Create Lambda with --package-type Image
+
+- Scheduled via EventBridge rule
 
 ---
+## 🤝 Collaboration
 
-Generated by an automated assistant — feel free to edit or extend.
+This project is fully open-source, and contributions are welcome.
+You can collaborate by:
+* Enhancing the dashboard UI/UX
+* Adding new datasets (events, mobility, transportation)
+* Improving ETL pipelines
+* Testing new ML models (LightGBM, Deep Learning, Temporal Fusion Transformers)
+* Improving AWS deployment workflows
+If you are a researcher, student, or local authority member interested in tourism analytics, feel free to open an issue or pull request!
+
