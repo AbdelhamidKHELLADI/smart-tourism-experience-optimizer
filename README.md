@@ -45,6 +45,7 @@ The system automatically fetches data, preprocesses it, generates weekly forecas
 * Fetches the latest predictions and visualises them.
 
 ## ☁️ AWS Architecture
+![diagram](etc/aws-diagram.svg)  
 
 The system uses a simplified cloud pipeline:
 
