@@ -3,15 +3,14 @@ import streamlit as st
 import os
 from utils.data_utils import load_forecast, categorize_experience, EXPERIENCE_STYLES
 
-# -----------------------------
-# Page Config
-# -----------------------------
+
 st.set_page_config(page_title="Top Regions", layout="wide",page_icon="🏞️")
 
-# -----------------------------
-# Load data
-# -----------------------------
-DATA_PATH = os.getenv("FORECAST_CSV_PATH", "data/preprocessed.csv")
+BUCKET_NAME = os.getenv("TOURISM_BUCKET")
+if not BUCKET_NAME:
+    raise RuntimeError("TOURISM_BUCKET env var not set (BUCKET_NAME is required)")
+
+DATA_PATH = os.getenv("FORECAST_CSV_PATH", "preprocessed.csv")
 MONTHS = {
     "January":1, "February":2, "March":3,
     "April":4, "May":5, "June":6,
@@ -20,7 +19,7 @@ MONTHS = {
 }
 
 
-df = load_forecast(DATA_PATH)
+df = load_forecast(BUCKET_NAME,DATA_PATH)
 
 
 st.title("Top Regions per Month 📊 ")

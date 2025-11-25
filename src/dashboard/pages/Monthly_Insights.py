@@ -5,8 +5,11 @@ import calendar
 
 st.set_page_config(page_title="Monthly Insights", layout="wide",page_icon='🏞️')
 
+BUCKET_NAME = os.getenv("TOURISM_BUCKET")
+if not BUCKET_NAME:
+    raise RuntimeError("TOURISM_BUCKET env var not set (BUCKET_NAME is required)")
 
-DATA_PATH = os.getenv("FORECAST_CSV_PATH", "data/preprocessed.csv")
+DATA_PATH = os.getenv("FORECAST_CSV_PATH", "preprocessed.csv")
 MONTH_NAMES = {
     1: "January", 2: "February", 3: "March",
     4: "April", 5: "May", 6: "June",
@@ -15,7 +18,7 @@ MONTH_NAMES = {
 }
 
 
-df = load_forecast(DATA_PATH)
+df = load_forecast(BUCKET_NAME,DATA_PATH)
 
 
 

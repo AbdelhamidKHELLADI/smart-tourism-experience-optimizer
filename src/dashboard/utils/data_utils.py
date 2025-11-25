@@ -16,8 +16,8 @@ def load_data_cached(bucket_name,data_path):
     return df[["year", "week", "Region", "tourism_index", "experience_level"]]
 
 @st.cache_data
-def load_forecast(data_path):
-    df = pd.read_csv(data_path)
+def load_forecast(bucket_name,data_path):
+    df=read_from_s3(bucket_name,data_path)
     region_cols = [col for col in df.columns if col.startswith("region_")]
     df["Region"] = df[region_cols].idxmax(axis=1).str.replace("region__", "")
     df["Region"] = df["Region"].str.replace('_', " ")
