@@ -1,5 +1,4 @@
-# Trentino Tourism Forecast – Weekly Tourism Demand Prediction
-
+# Tourism Experience Optimizer
 ## 📌 Project Overview
 
 This project predicts a weekly Tourism Experience Index for Trentino, Italy — an aggregated indicator derived from public mobility, weather, and accommodation data. 
